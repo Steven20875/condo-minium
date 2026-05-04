@@ -26,6 +26,18 @@ function ResidentMessagesPage() {
     }
     setMessages(prev => [...prev, msg])
     setInput('')
+
+    setTimeout(() => {
+      const reply: ChatMessage = {
+        id: `m${Date.now()}-reply`,
+        senderId: 'admin',
+        senderName: 'Admin',
+        content: 'Thanks for your message. We will review it and get back to you shortly.',
+        timestamp: new Date().toLocaleTimeString('en-PH', { hour: '2-digit', minute: '2-digit' }),
+        read: true,
+      }
+      setMessages(prev => [...prev, reply])
+    }, 800)
   }
 
   return (
@@ -42,7 +54,7 @@ function ResidentMessagesPage() {
         <div className="px-5 py-4 border-b flex items-center gap-3" style={{ borderColor: '#e8edf5', background: '#fafbfe' }}>
           <div className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white" style={{ background: '#0f1e42' }}>A</div>
           <div>
-            <div className="font-semibold text-sm" style={{ color: '#0f1e42' }}>SkyView Administration</div>
+            <div className="font-semibold text-sm" style={{ color: '#0f1e42' }}>ONE SPATIAL ILOILO Administration</div>
             <div className="text-xs" style={{ color: '#059669' }}>Online</div>
           </div>
         </div>

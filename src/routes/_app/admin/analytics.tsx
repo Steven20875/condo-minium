@@ -103,7 +103,7 @@ function AnalyticsPage() {
           <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "'DM Serif Display', serif", color: '#0f1e42' }}>
             Analytics
           </h1>
-          <p className="text-sm" style={{ color: '#6b7a99' }}>Performance insights — SkyView Residences</p>
+          <p className="text-sm" style={{ color: '#6b7a99' }}>Performance insights — ONE SPATIAL ILOILO</p>
         </div>
         <div className="flex gap-2 bg-white rounded-xl p-1 shadow-sm" style={{ border: '1px solid #e8edf5' }}>
           {periods.map(p => (

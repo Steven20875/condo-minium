@@ -1,7 +1,7 @@
-import { Link, useRouterState } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
 import {
   LayoutDashboard, Building2, CalendarCheck, Users, BarChart3,
-  ClipboardList, MessageSquare, LogOut, Home, Menu, X, Bell,
+  ClipboardList, MessageSquare, LogOut, Home, Menu, X,
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -23,17 +23,16 @@ const residentLinks = [
 const adminLinks = [
   { to: '/admin', icon: LayoutDashboard, label: 'Overview', exact: true },
   { to: '/admin/analytics', icon: BarChart3, label: 'Analytics', exact: false },
-  { to: '/units', icon: Building2, label: 'Units', exact: false },
+  { to: '/admin/units', icon: Building2, label: 'Units Management', exact: false },
   { to: '/admin/users', icon: Users, label: 'Residents', exact: false },
   { to: '/admin/bookings', icon: CalendarCheck, label: 'Bookings', exact: false },
   { to: '/admin/visits', icon: ClipboardList, label: 'Visit Logs', exact: false },
-  { to: '/admin/chat', icon: MessageSquare, label: 'Messages', exact: false },
+  { to: '/admin/chat', icon: MessageSquare, label: 'Chatbot', exact: false },
 ]
 
 export function Sidebar({ role, userName, userUnit, onLogout }: SidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const router = useRouterState()
-  const currentPath = router.location.pathname
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/'
   const links = role === 'admin' ? adminLinks : residentLinks
 
   const isActive = (to: string, exact: boolean) => {
@@ -53,8 +52,8 @@ export function Sidebar({ role, userName, userUnit, onLogout }: SidebarProps) {
             S
           </div>
           <div>
-            <div className="text-white font-semibold text-sm leading-tight">SkyView</div>
-            <div className="text-xs font-medium" style={{ color: '#c9a84c', letterSpacing: '0.08em' }}>RESIDENCES</div>
+            <div className="text-white font-semibold text-sm leading-tight">ONE SPATIAL</div>
+            <div className="text-xs font-medium" style={{ color: '#c9a84c', letterSpacing: '0.08em' }}>ILOILO</div>
           </div>
         </div>
       </div>

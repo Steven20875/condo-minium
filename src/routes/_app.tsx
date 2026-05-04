@@ -5,7 +5,8 @@ export const Route = createFileRoute('/_app')({
   beforeLoad: () => {
     if (typeof window !== 'undefined') {
       const user = localStorage.getItem('cboms_user')
-      if (!user) throw redirect({ to: '/' })
+      const token = localStorage.getItem('token')
+      if (!user || !token) throw redirect({ to: '/' })
     }
   },
   component: AppLayout,
@@ -22,6 +23,7 @@ function AppLayout() {
 
   const handleLogout = () => {
     localStorage.removeItem('cboms_user')
+    localStorage.removeItem('token')
     navigate({ to: '/' })
   }
 

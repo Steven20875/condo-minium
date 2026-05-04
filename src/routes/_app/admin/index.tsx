@@ -101,7 +101,7 @@ function AdminDashboard() {
           Admin Overview
         </h1>
         <p className="text-sm" style={{ color: '#6b7a99' }}>
-          SkyView Residences · May 3, 2026
+          ONE SPATIAL ILOILO · May 3, 2026
         </p>
       </div>
 

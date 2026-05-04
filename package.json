@@ -1,36 +1,32 @@
 {
-  "name": "dashboard",
-  "private": true,
+  "name": "condo-backend",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Express.js backend for condominium management system",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
+  "keywords": [
+    "express",
+    "mysql",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.6",
-    "@tanstack/react-router": "1.168.22",
-    "@tanstack/react-start": "1.167.41",
-    "@tanstack/react-store": "0.10.0",
-    "@tanstack/router-plugin": "1.167.22",
-    "@tanstack/store": "0.10.0",
-    "chart.js": "^4.5.1",
-    "lucide-react": "^0.576.0",
-    "react": "^19.2.0",
-    "react-chartjs-2": "^5.3.1",
-    "react-dom": "^19.2.0",
-    "tailwindcss": "^4.0.6",
-    "vite-tsconfig-paths": "^6.0.2"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.6.5",
+    "node-fetch": "^3.3.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.6",
-    "@types/node": "^22.10.2",
-    "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.2.0",
-    "@vitejs/plugin-react": "^5.0.4",
-    "lucide-react": "^0.576.0",
-    "tailwindcss": "^4.0.6",
-    "typescript": "^5.7.2",
-    "rimraf": "^6.0.1",
-    "vite": "^7.1.7"
+    "nodemon": "^3.0.2"
   }
 }
